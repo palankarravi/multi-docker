@@ -14,7 +14,7 @@ after_success:
   - docker build -t palankarravi/multi-server ./server
   - docker build -t palankarravi/multi-worker ./worker
   #Login to Docker cli
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER-ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take those inages and push them to docker_container
   - docker push palankarravi/multi-client
   - docker push palankarravi/multi-nginx 
